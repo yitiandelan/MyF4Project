@@ -11,27 +11,27 @@ extern "C" {
 #include "BSP_LCD.h"
 #include "BSP_MPU.h"
 
-#define configUSE_MCO1					0
-#define configUSE_MCO2					0
+#define configUSE_MCO1				0
+#define configUSE_MCO2				0
 
-#define configUSE_LED						1
+#define configUSE_LED				1
 
-#define configUSE_ADC123				0
+#define configUSE_ADC123			0
 #define configUSE_ExternADC			0
-#define configUSE_DAC						1
-#define configUSE_DDS						0
-#define configUSE_CODEC					0
+#define configUSE_DAC				1
+#define configUSE_DDS				0
+#define configUSE_CODEC				0
 
-#define configUSE_RTT						1
-#define configUSE_USB						1
-#define configUSE_LCD						1
+#define configUSE_RTT				1
+#define configUSE_USB				1
+#define configUSE_LCD				1
 
-#define configUSE_PWM						0
-#define configUSE_MPU						0
+#define configUSE_PWM				0
+#define configUSE_MPU				0
 
-#define configUSE_LED_Port							GPIOA
-#define configUSE_LED_Port_CLK_ENABLE				__GPIOA_CLK_ENABLE
-#define configUSE_LED_Pin							GPIO_PIN_3
+#define configUSE_LED_Port				GPIOA
+#define configUSE_LED_Port_CLK_ENABLE	__GPIOA_CLK_ENABLE
+#define configUSE_LED_Pin				GPIO_PIN_3
 
 #define _MAX(a,b)	(a>b?a:b)
 #define _MIN(a,b)	(a>b?b:a)

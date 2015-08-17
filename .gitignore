@@ -82,4 +82,5 @@ Libraries/
 *.htm
 *.map
 *.lst
-.uvoptx
+*.uvoptx
+JlinkLog.txt
