@@ -74,3 +74,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+hex/
+Libraries/
+*.sdf
+*.suo
+*.htm
+*.map
+*.lst
+.uvoptx

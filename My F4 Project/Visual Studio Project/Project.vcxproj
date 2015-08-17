@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="My Project|Win32">
+      <Configuration>My Project</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{c4e97a9c-5ed0-4556-a59d-97c1dadcede9}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='My Project|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='My Project|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='My Project|Win32'">
+    <NMakeOutput>Project.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>__CC_ARM;USE_HAL_DRIVER;STM32F407xx;ARM_MATH_CM4;__vstdio</NMakePreprocessorDefinitions>
+    <IncludePath>E:\Keil_v5\ARM\ARMCC\include;..\Libraries\CMSIS\Include;..\Libraries\CMSIS\Device\ST\STM32F4xx\Include;..\Libraries\STM32F4xx_HAL_Driver\Inc;..\Libraries\STM32_USB_Device_Library\Core\Inc;..\Libraries\STM32_USB_Device_Library\Class\CDC\Inc;..\Libraries\FreeRTOS\include;..\Libraries\FreeRTOS\portable\RVDS\ARM_CM4F;..\Libraries\FreeRTOS\CMSIS_RTOS;..\Libraries\SEGGER_RTT;..\BSP;..\Code</IncludePath>
+    <NMakeBuildCommandLine>"E:\Program Files\Keil_v5\UV4\UV4.exe " -b ..\Project\Project.uvprojx -t "My Project" -j0 -o Build.log</NMakeBuildCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s" />
+    <None Include="..\Libraries\SEGGER_RTT\SEGGER_RTT_Conf.h" />
+    <None Include="..\Code\stm32f4xx_hal_conf.h" />
+    <None Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\BSP\BSP.c" />
+    <ClCompile Include="..\BSP\BSP_ADC.c" />
+    <ClCompile Include="..\BSP\BSP_CODEC.c" />
+    <ClCompile Include="..\BSP\BSP_DAC.c" />
+    <ClCompile Include="..\BSP\BSP_LCD.c" />
+    <ClCompile Include="..\BSP\BSP_MPU.c" />
+    <ClCompile Include="..\BSP\BSP_MPU_ex.c" />
+    <ClCompile Include="..\BSP\BSP_USB.c" />
+    <ClCompile Include="..\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fsmc.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dac.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dac_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s_ex.c" />
+    <ClCompile Include="..\Libraries\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c" />
+    <ClCompile Include="..\Libraries\STM32_USB_Device_Library\Core\Src\usbd_core.c" />
+    <ClCompile Include="..\Libraries\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c" />
+    <ClCompile Include="..\Libraries\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c" />
+    <ClCompile Include="..\Libraries\STM32_USB_Device_Library\Class\CDC\Src\usbd_cdc.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\croutine.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\list.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\queue.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\tasks.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\timers.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\portable\RVDS\ARM_CM4F\port.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\CMSIS_RTOS\cmsis_os.c" />
+    <ClCompile Include="..\Libraries\FreeRTOS\portable\MemMang\heap_4.c" />
+    <ClCompile Include="..\Libraries\SEGGER_RTT\SEGGER_RTT.c" />
+    <ClCompile Include="..\Libraries\SEGGER_RTT\SEGGER_RTT_Printf.c" />
+    <ClCompile Include="..\Code\stm32f4xx_hal_msp.c" />
+    <ClCompile Include="..\Code\stm32f4xx_it.c" />
+    <ClCompile Include="..\Code\usb_device.c" />
+    <ClCompile Include="..\Code\usbd_cdc_if.c" />
+    <ClCompile Include="..\Code\usbd_conf.c" />
+    <ClCompile Include="..\Code\usbd_desc.c" />
+    <ClCompile Include="..\USER\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
