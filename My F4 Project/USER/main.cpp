@@ -1,6 +1,5 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
-
 #include "BSP.h"
 
 osThreadId SYSTEMHandle;
@@ -66,7 +65,6 @@ void DispalyTask(void const * argument)
 /* InputTask function */
 void InputTask(void const * argument)
 {
-
 	for(;;)
 	{
 		osDelay(5);

@@ -1,5 +1,5 @@
 #include "BSP.h"
-#include "font.h"
+#include "BSP_LCD_font.h"
 #include "BSP_LCD_BMP.h"
 #include "stdio.h"
 #include "stdarg.h"
